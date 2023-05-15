@@ -4,7 +4,7 @@ from ..api.model import AbstractAPIHost
 
 class AbstractClient(ABC):
 
-    __api__: AbstractAPIHost = None
+    api_host: AbstractAPIHost = None
 
     @abstractmethod
     def login(self, *args, **kwargs):
@@ -12,5 +12,5 @@ class AbstractClient(ABC):
 
     @property
     def api(self):
-        return self.__api__
+        return self.api_host
     
