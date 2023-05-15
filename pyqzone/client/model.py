@@ -1,16 +1,29 @@
 from abc import ABC, abstractmethod
-from ..api.model import AbstractAPIHost
+from ..api.model import *
 
 
 class AbstractClient(ABC):
 
-    api_host: AbstractAPIHost = None
+    emotion: AbstractEmotionAPIGroup
+    """说说API"""
+
+    blog: AbstractBlogAPIGroup
+    """日志API"""
+
+    album: AbstractAlbumAPIGroup
+    """相册API"""
+
+    board: AbstractBoardAPIGroup
+    """留言板API"""
+
+    profile: AbstractProfileAPIGroup
+    """个人信息API"""
+
+    friend: AbstractFriendAPIGroup
+    """好友信息API"""
 
     @abstractmethod
     def login(self, *args, **kwargs):
         pass
 
-    @property
-    def api(self):
-        return self.api_host
     

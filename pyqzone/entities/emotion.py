@@ -1,5 +1,5 @@
 """说说相关实体类"""
-from .misc import *
+from .misc import Feed
 
 
 class Emotion(Feed):

@@ -1,5 +1,6 @@
 from ..model import AbstractBlogAPIGroup
+from .host import WebAPI
 
 
-class WebBlogAPI(AbstractBlogAPIGroup):
+class WebBlogAPI(WebAPI, AbstractBlogAPIGroup):
     pass

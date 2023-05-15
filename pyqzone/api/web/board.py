@@ -1,5 +1,6 @@
 from ..model import AbstractBoardAPIGroup
+from .host import WebAPI
 
 
-class WebBoardAPI(AbstractBoardAPIGroup):
+class WebBoardAPI(WebAPI, AbstractBoardAPIGroup):
     pass

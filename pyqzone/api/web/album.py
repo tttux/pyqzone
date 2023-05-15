@@ -1,5 +1,6 @@
 from ..model import AbstractAlbumAPIGroup
+from .host import WebAPI
 
 
-class WebAlbumAPI(AbstractAlbumAPIGroup):
+class WebAlbumAPI(WebAPI, AbstractAlbumAPIGroup):
     pass

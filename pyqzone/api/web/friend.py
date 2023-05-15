@@ -1,5 +1,6 @@
 from ..model import AbstractFriendAPIGroup
+from .host import WebAPI
 
 
-class WebFriendAPI(AbstractFriendAPIGroup):
+class WebFriendAPI(WebAPI, AbstractFriendAPIGroup):
     pass
