@@ -22,6 +22,9 @@ class AbstractClient(ABC):
     friend: AbstractFriendAPIGroup
     """好友信息API"""
 
+    uin: int = 0 
+    """登录的QQ号"""
+
     @abstractmethod
     def login(self, *args, **kwargs):
         pass
